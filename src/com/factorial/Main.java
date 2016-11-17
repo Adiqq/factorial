@@ -9,10 +9,9 @@ public class Main {
     }
 
     public static int factorial(int factorialForNumber){
-        int s = 1;
-        for(int i = 1; i <= factorialForNumber; i++){
-            s *= i;
+        if(factorialForNumber <= 1){
+            return 1;
         }
-        return s;
+        return factorialForNumber * factorial(factorialForNumber - 1);
     }
 }
